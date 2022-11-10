@@ -1,5 +1,5 @@
 .list {
-    columns: 2 auto;
+    columns: 3 auto;
 }
 
 .div {
@@ -13,26 +13,45 @@
     padding-bottom: 12px;
     padding-right: 8px;
     padding-left: 8px;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: fit-content;
+    width: 30vw;
+    height: 30vh;
+    background-color: antiquewhite;
+}
+
+.div3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lable {
+    color: black;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
 .image {
-    height: 100px;
+    height: 30vh;
+    border-radius: 18px;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    padding: 5px;
+    width: 10vw;
 }
 
-.name {
-
-}
-
-.author {
-
-}
-
-.subject {
-
-}
-
-.date {
-
+.value {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: black;
+    margin-left: 20px;
 }
