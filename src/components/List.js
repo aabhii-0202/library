@@ -7,12 +7,14 @@ export default function List({books}) {
         {
           books.map(item => {
               return (
-                  <div>
-                    <img src={item.image} />
-                    <h2>{item.name}</h2>
-                    <h2>{item.author}</h2>
-                    <h2>{item.subject}</h2>
-                    <h2>{item.date}</h2>
+                  <div className='div'>
+                    <img className='image' src={item.image} alt="img" />
+                    <div>
+                    <text className='name'>{item.name}</text>
+                    <text className='author'>{item.author}</text>
+                    <text className='subject'>{item.subject}</text>
+                    <text className='date'>{item.date}</text>
+                    </div>
                   </div>
               );
           })
