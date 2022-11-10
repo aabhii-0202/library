@@ -9,6 +9,7 @@ function Filters({
     setSubject,
     Publishdate,
     setPublishdate,
+    onHandleChange
 }) {
   return (
     <div>
@@ -18,25 +19,37 @@ function Filters({
             <input
                 type="text"
                 value={title}
-                onChange={(text) => setTitle(text.target.value)}
+                onChange={(text) => {
+                    setTitle(text.target.value);
+                    onHandleChange(text.target.value);
+                }}
             />
             <label>Author:</label>
             <input
                 type="text"
                 value={author}
-                onChange={(text) => setAuthor(text.target.value)}
+                onChange={(text) => {
+                    setAuthor(text.target.value);
+                    onHandleChange(text.target.value);
+                }}
             />
             <label>Subject:</label>
             <input
                 type="text"
                 value={subject}
-                onChange={(text) => setSubject(text.target.value)}
+                onChange={(text) => {
+                    setSubject(text.target.value);
+                    onHandleChange(text.target.value);
+                }}
             />
             <label>Publish date:</label>
             <input
                 type="date"
                 value={Publishdate}
-                onChange={(text) => setPublishdate(text.target.value)}
+                onChange={(text) => {
+                    setPublishdate(text.target.value);
+                    onHandleChange(text.target.value);
+                }}
             />
         </form>
     </div>
