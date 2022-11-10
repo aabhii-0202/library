@@ -1,5 +1,8 @@
-.heading {
+.t1 {
     padding: 8px 20px;
     color: #f00;
+}
+.footerbar {
+    padding: 8px 20px;
     background-color: antiquewhite;
 }
