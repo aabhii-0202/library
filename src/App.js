@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -10,10 +10,9 @@ function App() {
 
   const [list, setList] = useState(Books);
   const [filteredList, setfilteredList] = useState(list);
-  const [title,setTitle] = useState('');
-  const [author,setAuthor] = useState('');
-  const [subject,setSubject] = useState('');
-  const [Publishdate,setPublishdate] = useState('');
+  const [search, setsearch] = useState('');
+ 
+  const excludeColumns = ['image'];
   let numBooks = filteredList.length;
 
   const onHandleChange = (text) => {
@@ -22,26 +21,27 @@ function App() {
       setfilteredList(list);
     }
     else{
-      const filteredarray = [];
-
+      const filteredarray = list.filter(item => {
+        return Object.keys(item).some(key => 
+          excludeColumns.includes(key) ? false : item[key].toString().toLowerCase().includes(lower))
+      });
       setfilteredList(filteredarray);
     }
   }
+  
 
   return (
     <div className="App">
       <NavBar/>
-      <Filters 
-        title={title}
-        setTitle={setTitle}
-        author={author}
-        setAuthor={setAuthor}
-        subject={subject}
-        setSubject={setSubject}
-        Publishdate={Publishdate}
-        setPublishdate={setPublishdate}
-        onHandleChange={onHandleChange}
-      />
+      <label>You can search for Name, Author, Subject and Date(dd-mm-yyyy)</label><br/>
+            <input
+                type="text"
+                value={search}
+                onChange={(text) => {
+                    setsearch(text.target.value);
+                    onHandleChange(text.target.value);
+                }}
+            />
       <h2>Total Books: {numBooks}</h2>
       <List books={filteredList}/>
       <Footer/>
