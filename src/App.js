@@ -52,8 +52,11 @@ function App() {
   return (
     <div className="screen">
       <NavBar/>
-      <text>You can search for Name, Author, Subject and Date(dd-mm-yyyy)</text><br/>
+      <div className='container'>
+      <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)</text><br/>
             <input
+                placeholder='Type to search'
+                className='input'
                 type="text"
                 value={search}
                 onChange={(text) => {
@@ -65,10 +68,14 @@ function App() {
       <BottomScrollListener onBottom={startLoading}>
           <div />
         </BottomScrollListener>
-      <List books={filteredList}/>
+      {
+        filteredList.length> 0 ? <List books={filteredList}/>
+      : <text className='noRes'>No Results Found</text>
+      }
+      </div>
       <Footer/>
       {
-        loading ? <text>Loading</text> : null
+        loading ? <text className='loading'>Loading</text> : null
       }
     </div>
   );
