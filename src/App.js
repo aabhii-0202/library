@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -14,17 +14,22 @@ function App() {
   const [loading, setloading] = useState(false);
   
 
+  useEffect(()=>{
+    setList(Books);
+  },[])
  
   const excludeColumns = ['image'];
   let numBooks = filteredList.length;
 
   const startLoading = () => {
-    setloading(true);
-    setTimeout(()=>{
+
+    if (!search){
+      setloading(true);
+      setTimeout(()=>{
       setfilteredList([...list,...filteredList]);
-      setList([...filteredList]);
+      setList([...list,...filteredList]);
       setloading(false);
-    },1000);
+    },1000);}
   }
 
   const onHandleChange = (text) => {
