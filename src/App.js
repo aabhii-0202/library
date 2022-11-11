@@ -63,7 +63,7 @@ function App() {
     <div className="screen">
       <NavBar/>
       <div className='container'>
-        <div>
+        <div className='searchcontainer'>
           <input
               placeholder='Type to search'
               className='input'
