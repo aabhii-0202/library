@@ -17,7 +17,7 @@ export default function List({books}) {
         {
           books.map(item => {
             return (
-              <div className='div' >
+              <div className='div'>
                 <img className='image' src={item.image} alt="img" />
                 <div className='div3'>
                   <Tag lable='Name:' value={item.name}/>

@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import List from './components/List';
-import {Books} from './DummyData/bookList';
+import {Books, Books2} from './DummyData/bookList';
 import {BottomScrollListener} from 'react-bottom-scroll-listener';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
   const [filteredList, setfilteredList] = useState([]);
   const [search, setsearch] = useState('');
   const [loading, setloading] = useState(false);
+  const [b1,setb1] = useState(false);
   
 
   useEffect(()=>{
@@ -24,12 +25,19 @@ function App() {
 
   const startLoading = () => {
 
-    if (!search && numBooks<=60){
+    if (!search && numBooks<=40){
       setloading(true);
       setTimeout(()=>{
-      setfilteredList([...list,...Books]);
-      setList([...list,...Books]);
+        if(b1){
+        setfilteredList([...list,...Books]);
+        setList([...list,...Books]);
+        }
+        else {
+          setfilteredList([...list,...Books2]);
+          setList([...list,...Books2]);
+        }
       setloading(false);
+      setb1(!b1);
     },1000);}
   }
 

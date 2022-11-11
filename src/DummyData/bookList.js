@@ -84,40 +84,43 @@ export const Books = [
         "author":"Israel gollancz",
         "subject":"love",
         "date":"18-4-2019"
-    },
-    {
-        "image":img11,
-        "name":"The yake banana yoshimoto",
-        "author":"Israel gollancz",
-        "subject":"water",
-        "date":"18-4-2019"
-    },
-    {
-        "image":img12,
-        "name":"Harry potter",
-        "author":"J.K rowling",
-        "subject":"fiction",
-        "date":"2-5-1999"
-    },
-    {
-        "image":img13,
-        "name":"The inheritance games",
-        "author":"Jennifer lynn barnes",
-        "subject":"games",
-        "date":"2-5-1999"
-    },
-    {
-        "image":img14,
-        "name":"Kinders",
-        "author":"Mynkel giese",
-        "subject":"The dawn of thorns",
-        "date":"2-5-1999"
-    },
-    {
-        "image":img15,
-        "name":"Company annual report",
-        "author":"Brain graves",
-        "subject":"income",
-        "date":"18-4-2019"
     }
+]
+
+export const Books2 = [
+{
+    "image":img11,
+    "name":"The yake banana yoshimoto",
+    "author":"Israel gollancz",
+    "subject":"water",
+    "date":"18-4-2019"
+},
+{
+    "image":img12,
+    "name":"Harry potter",
+    "author":"J.K rowling",
+    "subject":"fiction",
+    "date":"2-5-1999"
+},
+{
+    "image":img13,
+    "name":"The inheritance games",
+    "author":"Jennifer lynn barnes",
+    "subject":"games",
+    "date":"2-5-1999"
+},
+{
+    "image":img14,
+    "name":"Kinders",
+    "author":"Mynkel giese",
+    "subject":"The dawn of thorns",
+    "date":"2-5-1999"
+},
+{
+    "image":img15,
+    "name":"Company annual report",
+    "author":"Brain graves",
+    "subject":"income",
+    "date":"18-4-2019"
+}
 ]

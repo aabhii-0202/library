@@ -1,5 +1,7 @@
 .list {
     columns: 2 auto;
+    /* flex-direction: column;
+    display: flex; */
     padding-bottom: 24px;
 }
 
@@ -18,10 +20,15 @@
     min-height: 30vh;
     background-color: rgb(254, 233, 206);
     cursor: pointer;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+    box-shadow: 10px 10px;
 }
 
 .div:hover {
     background-color: rgb(255, 204, 136);
+    transform: scale(1.05);
+    overflow:hidden
 }
 
 
