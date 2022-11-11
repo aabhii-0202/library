@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #Setup
 Clone 
-Cd to project directore.
+Cd to project directory.
 
 ### `npm i`
 
