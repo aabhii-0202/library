@@ -38,89 +38,89 @@ export const Books = [
     },
     {
         "image":img4,
-        "name":"Do all things with love ",
+        "name":"Do All Things with Love ",
         "author":"Lorem Ipsun",
         "subject":"Love",
         "date":"23-11-2007"
     },
     {
         "image":img5,
-        "name":"The skymarked chronicies",
+        "name":"The Skymarked Chronicies",
         "author":"Kristen Cjccarelli",
         "subject":"Volume one",
         "date":"23-11-2007"
     },
     {
         "image":img6,
-        "name":"Book ranking on amazon",
-        "author":"Brain graves",
-        "subject":"study",
+        "name":"Book Ranking On Amazon",
+        "author":"Brain Graves",
+        "subject":"Study",
         "date":"23-11-2007"
     },
     {
         "image":img7,
-        "name":"Game of thrones",
+        "name":"Game of Thrones",
         "author":"Westgrob",
         "subject":"Fiction",
-        "date":"20-2-2001"
+        "date":"20-02-2001"
     },
     {
         "image":img8,
-        "name":"List of standrad book size",
-        "author":"Loren ipsun",
-        "subject":"study",
-        "date":"20-2-2001"
+        "name":"List Of Standrad Book Size",
+        "author":"Loren Ipsun",
+        "subject":"Study",
+        "date":"20-02-2001"
     },
     {
         "image":img9,
         "name":"Dream",
-        "author":"Loren ipsun",
+        "author":"Loren Ipsun",
         "subject":"Carrer",
-        "date":"20-2-2001"
+        "date":"20-02-2001"
     },
     {
         "image":img10,
-        "name":"The love letters",
-        "author":"Israel gollancz",
-        "subject":"love",
-        "date":"18-4-2019"
+        "name":"The Love Letters",
+        "author":"Israel Gollancz",
+        "subject":"Love",
+        "date":"18-04-2019"
     }
 ]
 
 export const Books2 = [
 {
     "image":img11,
-    "name":"The yake banana yoshimoto",
-    "author":"Israel gollancz",
-    "subject":"water",
-    "date":"18-4-2019"
+    "name":"The yake Banana yoshimoto",
+    "author":"Israel Gollancz",
+    "subject":"Water",
+    "date":"18-04-2019"
 },
 {
     "image":img12,
     "name":"Harry potter",
-    "author":"J.K rowling",
-    "subject":"fiction",
-    "date":"2-5-1999"
+    "author":"J.K Rowling",
+    "subject":"Fiction",
+    "date":"02-05-1999"
 },
 {
     "image":img13,
-    "name":"The inheritance games",
-    "author":"Jennifer lynn barnes",
-    "subject":"games",
-    "date":"2-5-1999"
+    "name":"The Inheritance Games",
+    "author":"Jennifer Lynn Barnes",
+    "subject":"Games",
+    "date":"02-05-1999"
 },
 {
     "image":img14,
     "name":"Kinders",
-    "author":"Mynkel giese",
-    "subject":"The dawn of thorns",
-    "date":"2-5-1999"
+    "author":"Mynkel Giese",
+    "subject":"The Dawn Of Thorns",
+    "date":"02-05-1999"
 },
 {
     "image":img15,
-    "name":"Company annual report",
-    "author":"Brain graves",
-    "subject":"income",
-    "date":"18-4-2019"
+    "name":"Company Annual Report",
+    "author":"Brain Graves",
+    "subject":"Income",
+    "date":"18-04-2019"
 }
 ]
