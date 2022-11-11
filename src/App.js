@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import List from './components/List';
 import {Books, Books2} from './DummyData/bookList';
 import {BottomScrollListener} from 'react-bottom-scroll-listener';
+import { Dna } from 'react-loader-spinner'
 
 function App() {
 
@@ -62,18 +63,20 @@ function App() {
     <div className="screen">
       <NavBar/>
       <div className='container'>
-      <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)</text><br/>
-            <input
-                placeholder='Type to search'
-                className='input'
-                type="text"
-                value={search}
-                onChange={(text) => {
-                    setsearch(text.target.value);
-                    onHandleChange(text.target.value);
-                }}
-            />
-      <h2>Total Books: {numBooks}</h2>
+        <div>
+          <input
+              placeholder='Type to search'
+              className='input'
+              type="text"
+              value={search}
+              onChange={(text) => {
+                  setsearch(text.target.value);
+                  onHandleChange(text.target.value);
+              }}
+          />
+          <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)</text><br/>
+        </div>
+      <text className='numbook'>Total Books: {numBooks}</text>
       <BottomScrollListener onBottom={startLoading}>
           <div />
        </BottomScrollListener>
@@ -82,9 +85,15 @@ function App() {
       : <text className='noRes'>No Results Found</text>
       }
       </div>
-      {
-        loading ? <text className='loading'>Loading</text> : null
-      }
+      <div className='loader'>
+      <Dna
+        visible={loading}
+        height="200"
+        width="200"
+        ariaLabel="dna-loading"
+        wrapperClass="loaderinside"
+        />
+        </div>
       <Footer/>
     </div>
   );
