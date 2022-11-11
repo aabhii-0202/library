@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import List from './components/List';
 import {Books, Books2} from './DummyData/bookList';
 import {BottomScrollListener} from 'react-bottom-scroll-listener';
-import { Dna } from 'react-loader-spinner'
+import { Dna } from 'react-loader-spinner';
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
   const [search, setsearch] = useState('');
   const [loading, setloading] = useState(false);
   const [b1,setb1] = useState(false);
+
   
 
   useEffect(()=>{
@@ -55,12 +56,10 @@ function App() {
       setfilteredList(filteredarray);
     }
   }
-  
-  
  
 
   return (
-    <div className="screen">
+    <div className="screen" >
       <NavBar/>
       <div className='container'>
         <div className='searchcontainer'>
