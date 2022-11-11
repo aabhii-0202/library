@@ -6,6 +6,7 @@ import List from './components/List';
 import {Books, Books2} from './DummyData/bookList';
 import {BottomScrollListener} from 'react-bottom-scroll-listener';
 import { Dna } from 'react-loader-spinner';
+import Popup from './components/Popup';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   const [search, setsearch] = useState('');
   const [loading, setloading] = useState(false);
   const [b1,setb1] = useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false);
 
   
 
@@ -57,8 +59,24 @@ function App() {
     }
   }
  
+  const [image,setimage] = useState('');
+  const [name,setName] = useState('');
+  const [author,setauthor] = useState('');
+  const [sub,setsub] = useState('');
+  const [date,setdate] = useState('');
+  const [desc,setdesc] = useState('');
 
-  return (
+  const Clicked = (item) => {
+    setButtonPopup(true);
+    setimage(item.image);
+    setName(item.name);
+    setauthor(item.author);
+    setsub(item.subject);
+    setdate(item.date);
+    setdesc('This is description. The book is very good etc.This is description. The book is very good etc.This is description. The book is very good etc.');
+    console.log('item',item);
+  }
+  return (   
     <div className="screen" >
       <NavBar/>
       <div className='container'>
@@ -73,14 +91,24 @@ function App() {
                   onHandleChange(text.target.value);
               }}
           />
-          <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)</text><br/>
+          <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)<br/> Click on the items to see description.</text><br/>
         </div>
       <text className='numbook'>Total Books: {numBooks}</text>
       <BottomScrollListener onBottom={startLoading}>
           <div />
        </BottomScrollListener>
+       <Popup 
+       trigger={buttonPopup}
+       setButtonPopup={setButtonPopup}
+       image={image}
+       name={name}
+       author={author}
+       sub={sub}
+       date={date}
+       desc={desc}
+       />
       {
-        filteredList.length> 0 ? <List books={filteredList}/>
+        filteredList.length> 0 ? <List books={filteredList} pop={Clicked}/>
       : <text className='noRes'>No Results Found</text>
       }
       </div>

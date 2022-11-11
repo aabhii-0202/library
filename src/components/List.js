@@ -1,7 +1,7 @@
 import React from 'react'
 import './List.css'
 
-export default function List({books}) {
+export default function List({books,pop}) {
 
   const Tag = ({lable,value}) => {
     return (
@@ -17,7 +17,7 @@ export default function List({books}) {
         {
           books.map(item => {
             return (
-              <div className='div'>
+              <div className='div' onClick={()=>pop(item)}>
                 <img className='image' src={item.image} alt="img" />
                 <div className='div3'>
                   <Tag lable='Name:' value={item.name}/>

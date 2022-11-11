@@ -3,13 +3,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
 }
 
 .text {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
-    font-size: 2.4vw;
+    font-size: 34px;
+    font-size: 3.4vw;
     color: rgb(71, 30, 30);
     align-self: center;
+    background-image: url("../DummyData/Images/textb.jpg");
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: antiquewhite;
 }

@@ -3,7 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(179, 213, 198);
+}
+
+.screen {
     background-image: url("./DummyData/Images/back.jpg");
 }
 
@@ -32,6 +34,7 @@
     font-size: 1.0vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 10px;
+    text-align: center;
 }
 
 .searchcontainer {
@@ -61,7 +64,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(179, 213, 198);
     font-size: 20px;
     font-size: 2.0vw;
     margin-top: 55px;
@@ -70,7 +72,6 @@
 
 .loader {
     align-self: center;
-    background-color: rgb(179, 213, 198);
     display: flex;
     flex: 1;
     align-items: center;
