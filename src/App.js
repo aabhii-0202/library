@@ -102,7 +102,7 @@ function App() {
        author={author}
        sub={sub}
        date={date}
-       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+       desc="I did little research about Dev Rev and Was amazed by the idea of DevRev. Developers and Clients are directly connecting. A manager-free environment. A very much fascinating idea. I will always want to work with people having great ideas like this. By the way congratulations on your seed funding round which you announced last year. "
        />
       {
         filteredList.length> 0 ? <List books={filteredList} pop={Clicked}/>
