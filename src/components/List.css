@@ -1,5 +1,6 @@
 .list {
     columns: 2 auto;
+    padding-bottom: 24px;
 }
 
 .div {
@@ -11,13 +12,18 @@
     padding-bottom: 18px;
     display: flex;
     flex-direction: row;
-    justify-content:safe;
     width: 35vw;
     height: 30vh;
     min-width: 30vw;
     min-height: 30vh;
     background-color: rgb(254, 233, 206);
+    cursor: pointer;
 }
+
+.div:hover {
+    background-color: rgb(255, 204, 136);
+}
+
 
 .div3 {
     display: flex;
@@ -27,7 +33,7 @@
     flex: 3;
 }
 
-.div2 {
+.details {
     display: flex;
     justify-content: space-between;
     padding-right: 20px;

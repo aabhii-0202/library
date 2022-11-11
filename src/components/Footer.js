@@ -1,14 +1,10 @@
 import React from 'react'
-import style from './Footer.css';
+import './Footer.css';
 function App() {
   return (
-    <>
-        <nav className="footerbar">
-            <div className="t1">
-                <h1 className={style.heading}>Library Management Footer</h1>
-            </div>
-        </nav>
-    </>
+  <div className="footerbar">
+      <h1 className=".textfooter">Made By Abhishek Kumar Singh</h1>
+  </div>
   )
 }
 

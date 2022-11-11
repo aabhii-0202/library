@@ -8,14 +8,15 @@ import {BottomScrollListener} from 'react-bottom-scroll-listener';
 
 function App() {
 
-  const [list, setList] = useState(Books);
-  const [filteredList, setfilteredList] = useState(list);
+  const [list, setList] = useState([]);
+  const [filteredList, setfilteredList] = useState([]);
   const [search, setsearch] = useState('');
   const [loading, setloading] = useState(false);
   
 
   useEffect(()=>{
     setList(Books);
+    setfilteredList(Books);
   },[])
  
   const excludeColumns = ['image'];
@@ -23,11 +24,11 @@ function App() {
 
   const startLoading = () => {
 
-    if (!search){
+    if (!search && numBooks<=60){
       setloading(true);
       setTimeout(()=>{
-      setfilteredList([...list,...filteredList]);
-      setList([...list,...filteredList]);
+      setfilteredList([...list,...Books]);
+      setList([...list,...Books]);
       setloading(false);
     },1000);}
   }
@@ -67,16 +68,16 @@ function App() {
       <h2>Total Books: {numBooks}</h2>
       <BottomScrollListener onBottom={startLoading}>
           <div />
-        </BottomScrollListener>
+       </BottomScrollListener>
       {
         filteredList.length> 0 ? <List books={filteredList}/>
       : <text className='noRes'>No Results Found</text>
       }
       </div>
-      <Footer/>
       {
         loading ? <text className='loading'>Loading</text> : null
       }
+      <Footer/>
     </div>
   );
 }

@@ -1,14 +1,10 @@
 import React from 'react'
-import style from './NavBar.css';
+import './NavBar.css';
 function App() {
   return (
-    <div class="page">
-        <nav className="navbar">
-            <div className="heading">
-                <h1 className={style.heading}>Library Management System</h1>
-            </div>
-        </nav>
-    </div>
+  <div className="heading">
+      <h1 className="text">Library Management System</h1>
+  </div>
   )
 }
 

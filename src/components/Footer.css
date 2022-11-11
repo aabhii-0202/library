@@ -1,8 +1,15 @@
-.t1 {
-    padding: 8px 20px;
-    color: #f00;
-}
 .footerbar {
     padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: antiquewhite;
+}
+
+.textfooter {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    font-size: 1.0vw;
+    color: rgb(71, 30, 30);
+    align-self: center;
 }
