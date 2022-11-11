@@ -2,13 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#Setup
-Clone 
-Cd to project directory.
-
 ### `npm i`
 
 ## Available Scripts
+
+Setup \
+Clone \
+Cd to project directory.
 
 In the project directory, you can run:
 
