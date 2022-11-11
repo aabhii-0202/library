@@ -7,6 +7,8 @@ import {Books, Books2} from './DummyData/bookList';
 import {BottomScrollListener} from 'react-bottom-scroll-listener';
 import { Dna } from 'react-loader-spinner';
 import Popup from './components/Popup';
+import bg from './DummyData/Images/back.jpg';
+import {Parallax} from 'react-parallax';
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
 
   const startLoading = () => {
 
-    if (!search && numBooks<=40){
+    if (!search && numBooks<=16){
       setloading(true);
       setTimeout(()=>{
         if(b1){
@@ -66,14 +68,18 @@ function App() {
   const [date,setdate] = useState('');
 
   const Clicked = (item) => {
-    setButtonPopup(true);
     setimage(item.image);
     setName(item.name);
     setauthor(item.author);
     setsub(item.subject);
     setdate(item.date);
+    setButtonPopup(true);
   }
   return (   
+      <Parallax strength={-400} bgImage={bg}
+      bgClassName="paralex"
+      bgImageSize='10vh'
+      >
     <div className="screen" >
       <NavBar/>
       <div className='container'>
@@ -102,7 +108,11 @@ function App() {
        author={author}
        sub={sub}
        date={date}
-       desc="I did little research about Dev Rev and Was amazed by the idea of DevRev. Developers and Clients are directly connecting. A manager-free environment. A very much fascinating idea. I will always want to work with people having great ideas like this. By the way congratulations on your seed funding round which you announced last year. "
+       desc="I did little research about Dev Rev and Was amazed by the idea of DevRev🧑‍🎓.
+       Developers and Clients are directly connecting 😮. A manager-free environment. 
+       This idea is fascinating to me. 
+       I will always want to work with people having great ideas like this 😊. 
+       By the way congratulations on your seed funding round which you announced last year.😉"
        />
       {
         filteredList.length> 0 ? <List books={filteredList} pop={Clicked}/>
@@ -120,6 +130,7 @@ function App() {
         </div>
       <Footer/>
     </div>
+      </Parallax>
   );
 }
 

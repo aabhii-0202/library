@@ -6,7 +6,7 @@
 }
 
 .screen {
-    background-image: url("./DummyData/Images/back.jpg");
+    /* background-image: url("./DummyData/Images/back.jpg"); */
 }
 
 .input {
@@ -29,12 +29,18 @@
 
 .searchlable {
     display: flex;
-    color: rgb(100, 35, 35);
+    color: rgb(252, 252, 252);
     font-size: 10px;
     font-size: 1.0vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 10px;
     text-align: center;
+    background-color: black;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
 }
 
 .searchcontainer {
@@ -77,4 +83,9 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 10px;
+}
+
+.bg {
+    position: absolute;
+    margin-top: 100px;
 }
