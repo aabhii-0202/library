@@ -19,15 +19,15 @@ function App(props) {
             >Close</button>
               <img className='image' src={props.image} alt="img" />
               <div>
-              <div className='div3'>
-                <Tag lable='Name:' value={props.name}/>
-                <Tag lable="Author's name:" value={props.author}/>
-                <Tag lable='Subject:' value={props.sub}/>
-                <Tag lable='Date Of Publish:' value={props.date}/>
-              </div>
+                <div className='detailsholder'>
+                  <Tag lable='Name:' value={props.name}/>
+                  <Tag lable="Author's name:" value={props.author}/>
+                  <Tag lable='Subject:' value={props.sub}/>
+                  <Tag lable='Date Of Publish:' value={props.date}/>
+                </div>
                 <div className='detailsdiv'>
-                <text className='lable'>Description:</text><br/>
-                <text className='desc'>{props.desc}</text>
+                  <text className='lable'>Description:</text><br/>
+                  <text className='desc'>{props.desc}</text>
                 </div>
               </div>
                 

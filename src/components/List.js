@@ -17,9 +17,9 @@ export default function List({books,pop}) {
         {
           books.map(item => {
             return (
-              <div className='div' onClick={()=>pop(item)}>
+              <div className='division' onClick={()=>pop(item)}>
                 <img className='image' src={item.image} alt="img" />
-                <div className='div3'>
+                <div className='division3'>
                   <Tag lable='Name:' value={item.name}/>
                   <Tag lable="Author's name:" value={item.author}/>
                   <Tag lable='Subject:' value={item.subject}/>

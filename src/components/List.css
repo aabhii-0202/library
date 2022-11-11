@@ -5,7 +5,7 @@
     padding-bottom: 24px;
 }
 
-.div {
+.division {
     border-radius: 8px;
     border-color: antiquewhite;
     margin-top: 5vw;
@@ -26,14 +26,14 @@
     box-shadow: 10px 10px;
 }
 
-.div:hover {
+.division:hover {
     background-color: rgb(255, 204, 136);
     transform: scale(1.05);
     overflow:hidden;
 }
 
 
-.div3 {
+.division3 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

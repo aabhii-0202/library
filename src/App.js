@@ -64,7 +64,6 @@ function App() {
   const [author,setauthor] = useState('');
   const [sub,setsub] = useState('');
   const [date,setdate] = useState('');
-  const [desc,setdesc] = useState('');
 
   const Clicked = (item) => {
     setButtonPopup(true);
@@ -73,8 +72,6 @@ function App() {
     setauthor(item.author);
     setsub(item.subject);
     setdate(item.date);
-    setdesc('This is description. The book is very good etc.This is description. The book is very good etc.This is description. The book is very good etc.');
-    console.log('item',item);
   }
   return (   
     <div className="screen" >
@@ -105,7 +102,7 @@ function App() {
        author={author}
        sub={sub}
        date={date}
-       desc={desc}
+       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
        />
       {
         filteredList.length> 0 ? <List books={filteredList} pop={Clicked}/>

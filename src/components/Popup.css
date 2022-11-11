@@ -58,12 +58,13 @@
     box-shadow: 10px 10px;
 }
 
-.div3 {
+.detailsholder {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
-    margin-top: 60px;
-    height: 50vh;
+    margin-top: 100px;
+    height: 20vh;
+    justify-content: space-around;
 }
 
 .image {
@@ -85,10 +86,11 @@
     justify-content: space-between;
 }
 .detailsdiv {
-    margin-left: 20px;
+    margin-top: 50px;
     height: 10vh;
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
 .lable {
