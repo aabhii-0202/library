@@ -24,3 +24,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## Search for any field
 ![4](https://user-images.githubusercontent.com/67586389/201453307-d5722ef6-78ce-4520-8d88-e4d76bf578a5.png)
 ![5](https://user-images.githubusercontent.com/67586389/201453284-4e9bafeb-c2ed-4d11-8ac5-b7c4fa9a6791.png)
+## Popup on Click of Items
+![6](https://user-images.githubusercontent.com/67586389/201453500-f50637ca-8017-482b-9861-54342e5bf2c2.png)
