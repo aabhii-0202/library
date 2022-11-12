@@ -14,6 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### Must click on the list items to read the description.
 ### Paging and Search Filter Applied
 ### Have a look over the parallax effect.😉
+If you're facing not getting on scroll pagination, try resizing the browser window.
 
 ## Standard Design
 ![1](https://user-images.githubusercontent.com/67586389/201453287-d26c464d-f841-40ef-a963-618749273a40.png)
