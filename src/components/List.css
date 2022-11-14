@@ -1,7 +1,5 @@
 .list {
     columns: 2 auto;
-    /* flex-direction: column;
-    display: flex; */
     padding-bottom: 24px;
 }
 
@@ -23,7 +21,8 @@
     background-color: rgb(254, 233, 206);
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    box-shadow: 10px 10px;
+    box-shadow: 15px 15px grey;
+    
 }
 
 .division:hover {

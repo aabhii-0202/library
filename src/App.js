@@ -7,7 +7,7 @@ import {Books, Books2} from './DummyData/bookList';
 import {BottomScrollListener} from 'react-bottom-scroll-listener';
 import { Dna } from 'react-loader-spinner';
 import Popup from './components/Popup';
-import bg from './DummyData/Images/back.jpg';
+import bg from './DummyData/Images/back1.jpg';
 import {Parallax} from 'react-parallax';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 
   const startLoading = () => {
 
-    if (!search && numBooks<=16){
+    if (!search && numBooks<=15){
       setloading(true);
       setTimeout(()=>{
         if(b1){
@@ -42,9 +42,9 @@ function App() {
           setfilteredList([...list,...Books2]);
           setList([...list,...Books2]);
         }
+      // setb1(!b1);
       setloading(false);
-      setb1(!b1);
-    },1000);}
+    },1500);}
   }
 
   const onHandleChange = (text) => {
@@ -76,49 +76,51 @@ function App() {
     setButtonPopup(true);
   }
   return (   
-      <Parallax strength={-400} bgImage={bg}
+    <Parallax strength={-600} bgImage={bg}
       bgClassName="paralex"
       bgImageSize='10vh'
-      >
+    >
     <div className="screen" >
-      <NavBar/>
-      <div className='container'>
-        <div className='searchcontainer'>
-          <input
-              placeholder='Type to search'
-              className='input'
-              type="text"
-              value={search}
-              onChange={(text) => {
-                  setsearch(text.target.value);
-                  onHandleChange(text.target.value);
-              }}
+    <NavBar/>
+          <div className='container'>
+                <div className='searchcontainer'>
+                  <input
+                      placeholder='Type to search'
+                      className='input'
+                      type="text"
+                      value='asdfas'
+                      onChange={(text) => {
+                          setsearch(text.target.value);
+                          onHandleChange(text.target.value);
+                      }}
+                  />
+                  <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)<br/> Click on the items to see description.</text><br/>
+                </div>
+          <text className='numbook'>Total Books: {numBooks}</text>
+          <BottomScrollListener onBottom={startLoading}>
+              <div />
+          </BottomScrollListener>
+          <Popup 
+            trigger={buttonPopup}
+            setButtonPopup={setButtonPopup}
+            image={image}
+            name={name}
+            author={author}
+            sub={sub}
+            date={date}
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.😉"
           />
-          <text className="searchlable">You can search for Name, Author, Subject and Date(dd-mm-yyyy)<br/> Click on the items to see description.</text><br/>
-        </div>
-      <text className='numbook'>Total Books: {numBooks}</text>
-      <BottomScrollListener onBottom={startLoading}>
-          <div />
-       </BottomScrollListener>
-       <Popup 
-       trigger={buttonPopup}
-       setButtonPopup={setButtonPopup}
-       image={image}
-       name={name}
-       author={author}
-       sub={sub}
-       date={date}
-       desc="I did little research about Dev Rev and Was amazed by the idea of DevRev🧑‍🎓.
-       Developers and Clients are directly connecting 😮. A manager-free environment. 
-       This idea is fascinating to me. 
-       I will always want to work with people having great ideas like this 😊. 
-       By the way congratulations on your seed funding round which you announced last year.😉"
-       />
-      {
-        filteredList.length> 0 ? <List books={filteredList} pop={Clicked}/>
-      : <text className='noRes'>No Results Found</text>
-      }
-      </div>
+          {
+            filteredList.length> 0
+            ?
+            <List books={filteredList} pop={Clicked}/>
+            :
+            <text className='noRes'>No Results Found</text>
+          }
+          </div>
       <div className='loader'>
       <Dna
         visible={loading}
@@ -130,7 +132,7 @@ function App() {
         </div>
       <Footer/>
     </div>
-      </Parallax>
+    </Parallax>
   );
 }
 
